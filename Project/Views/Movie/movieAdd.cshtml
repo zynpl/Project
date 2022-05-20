@@ -1,0 +1,16 @@
+﻿@model Project.Models.Movies
+@{
+    ViewData["Title"] = "movieAdd";
+}
+
+<h1>movieAdd</h1>
+<form class="form-group" method="post">
+    <b>id</b>
+    @Html.TextBoxFor(x => x.Movie_Name, new { @class = "form-control" })
+    <br />
+    <b>Movie Name</b>
+    @Html.TextBoxFor(x => x.Movie_Genre, new { @class = "form-control" })
+    <br />
+  
+    <button class="btn btn-info">Add</button>
+</form>

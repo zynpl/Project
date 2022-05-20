@@ -1,0 +1,40 @@
+﻿@using Project.Models
+@model List<Movies>
+@{
+    ViewData["Title"] = "movieTable";
+}
+
+<h1>movieTable</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Movie Genre</th>
+            
+
+            @*<th>Update</th>
+            <th>Delete</th>*@
+
+
+
+        </tr>
+    </thead>
+
+    @foreach (var movies in Model)
+    {
+<tr>
+    <td>@movies.Id</td>
+    <td>@movies.Movie_Name</td>
+    <td>@movies.Movie_Genre</td>
+
+    @*<td><a href="/Page/tableShow/@movies.Id">Update</a></td>
+        <td><a href="/Page/tDelete/@movies.Id">Delete</a></td>*@
+
+
+
+
+</tr>
+    }
+</table>
